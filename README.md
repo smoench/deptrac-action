@@ -1,4 +1,11 @@
-# GithubAction for deptrac
+# deptrac-action
+
+## What does this action do?
+
+This action runs [`sensiolabs-de/deptrac`](https://github.com/sensiolabs/deptrac).
+You define via `args` which command runs and which depfile is used.
+
+That is, when you enable this action, the action will fail when finds violations between layers.
 
 ## Usage
 
@@ -58,3 +65,7 @@ jobs:
 ## License
 
 This package is licensed using the MIT License.
+
+## Credits
+
+The implementation of this GitHub action is largely inspired by the work of [`Andreas Möller`](https://github.com/localheinz) on the GitHub actions [`localheinz/composer-normalize-action`](https://github.com/localheinz/composer-normalize-action).
