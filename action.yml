@@ -1,0 +1,15 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+
+name: 'deptrac-action'
+
+branding:
+    icon: 'box'
+    color: 'green'
+
+description: 'Keep your architecture clean.'
+
+author: 'smoench'
+
+runs:
+    using: 'docker'
+    image: 'docker://smoench/deptrac-action'
