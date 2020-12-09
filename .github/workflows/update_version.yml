@@ -15,7 +15,6 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v2
         with:
-          ref: master
           fetch-depth: '0'
 
       - name: "Update Dockerfile and action.yml"
@@ -40,7 +39,7 @@ jobs:
           commit_user_name: "Simon Mönch"
 
       - name: "Tag version ${{ steps.fetch_version.outputs.latest }}"
-        uses: "anothrNick/github-tag-action@1.30.0"
+        uses: "anothrNick/github-tag-action@1.33.0"
         if: steps.commit.outputs.changes_detected == 'true'
         id: tag
         env:
