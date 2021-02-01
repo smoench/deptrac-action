@@ -2,7 +2,7 @@
 
 ## What does this action do?
 
-This action runs [`sensiolabs-de/deptrac`](https://github.com/sensiolabs-de/deptrac).
+This action runs [`qossmic/deptrac`](https://github.com/qossmic/deptrac).
 You define via `args` which command runs and which depfile is used.
 
 That is, when you enable this action, the action will fail when finds violations between layers.
