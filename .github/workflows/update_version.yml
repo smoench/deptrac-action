@@ -20,7 +20,7 @@ jobs:
       - name: "Update Dockerfile and action.yml"
         id: fetch_version
         run: |
-          latest=$(curl -s https://packagist.org/packages/sensiolabs-de/deptrac.json|jq '[.package.versions[]|select(.version|test("^\\d+\\.\\d+\\.\\d+$"))|.version]|max_by(.|[splits("[.]")]|map(tonumber))')
+          latest=$(curl -s https://packagist.org/packages/qossmic/deptrac.json|jq '[.package.versions[]|select(.version|test("^\\d+\\.\\d+\\.\\d+$"))|.version]|max_by(.|[splits("[.]")]|map(tonumber))')
           latest=$(echo $latest | tr -d '"')
           echo "Latest deptrac version is $latest"
           echo ::set-output name=latest::$latest
@@ -33,9 +33,9 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         id: commit
         with:
-          commit_author: "Simon Mönch <simon.moench@sensiolabs.de>"
+          commit_author: "Simon Mönch <simon.moench@qossmic.com>"
           commit_message: "Enhancement: Upgrade to deptrac ${{ steps.fetch_version.outputs.latest }}"
-          commit_user_email: "simon.moench@sensiolabs.de"
+          commit_user_email: "simon.moench@qossmic.com"
           commit_user_name: "Simon Mönch"
 
       - name: "Tag version ${{ steps.fetch_version.outputs.latest }}"
@@ -56,4 +56,4 @@ jobs:
           tag_name: ${{ steps.tag.outputs.new_tag }}
           release_name: ${{ steps.tag.outputs.new_tag }}
           commitish: master
-          body: "https://github.com/sensiolabs-de/deptrac/releases/tag/${{ steps.tag.outputs.new_tag }}"
+          body: "https://github.com/qossmic/deptrac/releases/tag/${{ steps.tag.outputs.new_tag }}"
