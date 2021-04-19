@@ -32,13 +32,13 @@ jobs:
     - name: deptrac
       uses: docker://smoench/deptrac-action:latest
       with:
-        args: analyse depfile.yml
+        args: analyse depfile.yaml
 ```
 
 You can also execute the image directly by running
 
 ```shell script
-docker run --interactive --rm --tty --workdir=/app --volume ${PWD}:/app smoench/deptrac-action:latest analyse depfile.yml
+docker run --interactive --rm --tty --workdir=/app --volume ${PWD}:/app smoench/deptrac-action:latest analyse depfile.
 ```
 
 :bulb: Also see [Docker Docs: Docker run reference](https://docs.docker.com/engine/reference/run/).
