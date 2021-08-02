@@ -75,12 +75,11 @@ jobs:
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
-        # if: steps.commit.outputs.changes_detected == 'true'
+        if: steps.commit.outputs.changes_detected == 'true'
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
           platforms: linux/amd64,linux/arm64
           tags: |
             smoench/deptrac-action:latest
-            smoench/deptrac-action:0.14.1
-          # ${{ steps.tag.outputs.new_tag }}
+            smoench/deptrac-action:${{ steps.tag.outputs.new_tag }}
