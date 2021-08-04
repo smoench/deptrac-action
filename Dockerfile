@@ -2,7 +2,7 @@ FROM php:7.4-alpine
 
 LABEL "repository"="http://github.com/smoench/deptrac-action"
 LABEL "homepage"="http://github.com/actions"
-LABEL "maintainer"="Simon Mönch <simon.moench@qossmic.com>"
+LABEL "maintainer"="Simon Mönch <simonmoench@gmail.com>"
 
 ENV VERSION=0.14.1
 
