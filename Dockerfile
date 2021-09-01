@@ -4,7 +4,7 @@ LABEL "repository"="http://github.com/smoench/deptrac-action"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Simon Mönch <simonmoench@gmail.com>"
 
-ENV VERSION=0.14.1
+ENV VERSION=0.15.2
 
 ADD https://github.com/qossmic/deptrac/releases/download/$VERSION/deptrac.phar /usr/local/bin/deptrac
 RUN chmod +x /usr/local/bin/deptrac
