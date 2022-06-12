@@ -12,4 +12,4 @@ author: 'smoench'
 
 runs:
     using: 'docker'
-    image: 'docker://smoench/deptrac-action:0.22.0'
+    image: 'docker://smoench/deptrac-action:0.22.1'
