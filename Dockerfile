@@ -1,4 +1,4 @@
-FROM php:7.4-alpine
+FROM php:8.1-alpine
 
 LABEL "repository"="http://github.com/smoench/deptrac-action"
 LABEL "homepage"="http://github.com/actions"
