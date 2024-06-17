@@ -73,7 +73,7 @@ jobs:
           body: "https://github.com/qossmic/deptrac/releases/tag/${{ steps.tag.outputs.new_tag }}"
       
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         if: steps.commit.outputs.changes_detected == 'true'
         with:
           context: .
